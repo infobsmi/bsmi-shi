@@ -39,5 +39,16 @@ namespace bsmi_shi
         {
             this.Close();
         }
+
+        private void MenuItem_Click_Refresh_Page(object sender, RoutedEventArgs e)
+        {
+            xBrowser.Load("https://www.jin10.com/example/jin10.com.html?fontSize=14px&amp;theme=white");
+
+        }
+
+        private void MenuItem_Click_1(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

@@ -5,7 +5,15 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <RootNamespace>bsmi_shi</RootNamespace>
     <UseWPF>true</UseWPF>
+    <StartupObject>bsmi_shi.App</StartupObject>
+    <ApplicationIcon />
   </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+  <OutputType>WinExe</OutputType>
+  <PlatformTarget>x64</PlatformTarget>
+  <DefineConstants>TRACE</DefineConstants>
+</PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="CefSharp.Wpf.NETCore" Version="91.1.230" />
