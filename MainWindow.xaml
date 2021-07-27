@@ -1,0 +1,27 @@
+﻿<Window x:Class="bsmi_shi.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:bsmi_shi" xmlns:wpf="clr-namespace:CefSharp.Wpf;assembly=CefSharp.Wpf"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="350" ResizeMode="NoResize" WindowStartupLocation="CenterScreen"  WindowStyle="None" MouseDown="Window_MouseDown" Topmost="True">
+    
+    <Grid Focusable="True">
+        
+
+        <wpf:ChromiumWebBrowser x:Name="Browser"
+                                    Address="https://www.jin10.com/example/jin10.com.html?fontSize=14px&amp;theme=white" Grid.ColumnSpan="2">
+
+        </wpf:ChromiumWebBrowser>
+        <Border BorderThickness="0,3,0,0" BorderBrush="Gray" >
+            <Border.ContextMenu>
+                <ContextMenu>
+                    <MenuItem Header="关闭" Click="MenuItem_Click"></MenuItem>
+                </ContextMenu>
+            </Border.ContextMenu>
+
+        </Border>
+
+    </Grid>
+</Window>
