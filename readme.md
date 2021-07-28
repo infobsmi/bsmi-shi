@@ -3,6 +3,12 @@
 一个快速的财经资源速览应用，用一个固定置顶的窗口，动态关注财经资讯。资讯会实时更新
 
 
+Buy me a cup of coffee for $3
+
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/M4M54KKIF)
+
+
+
 ![image](https://user-images.githubusercontent.com/278153/127122609-27417b8b-fa19-493b-8ab6-eddfb5562412.png)
 
 右键菜单：
