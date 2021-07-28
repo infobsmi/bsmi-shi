@@ -40,6 +40,27 @@ namespace bsmi_shi
             this.Close();
         }
 
+        //窗口小最化
+
+        private void MenuItem_Click_Window_Min(object sender, RoutedEventArgs e)
+        {
+            Application.Current.MainWindow.WindowState = WindowState.Minimized;
+        }
+
+        //窗口最大化
+
+        private void MenuItem_Click_Window_Max(object sender, RoutedEventArgs e)
+        {
+            Application.Current.MainWindow.WindowState = WindowState.Maximized;
+        }
+
+        //窗口还原
+
+        private void MenuItem_Click_Window_Normal(object sender, RoutedEventArgs e)
+        {
+            Application.Current.MainWindow.WindowState = WindowState.Normal;
+        }
+
         private void MenuItem_Click_Refresh_Page(object sender, RoutedEventArgs e)
         {
             xBrowser.Load("https://www.jin10.com/example/jin10.com.html?fontSize=14px&amp;theme=white");

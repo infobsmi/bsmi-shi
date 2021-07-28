@@ -19,8 +19,12 @@
             <Border.ContextMenu>
                 <ContextMenu>
 
+                    <MenuItem Header="最小化窗口" Click="MenuItem_Click_Window_Min"></MenuItem>
+                    <MenuItem Header="最大化窗口" Click="MenuItem_Click_Window_Max"></MenuItem>
+                    <MenuItem Header="还原窗口" Click="MenuItem_Click_Window_Normal"></MenuItem>
+                    <Separator />
                     <MenuItem Header="刷新数据" Click="MenuItem_Click_Refresh_Page"></MenuItem>
-
+                    <Separator />
                     <MenuItem Header="关闭" Click="MenuItem_Click"></MenuItem>
                 </ContextMenu>
             </Border.ContextMenu>
