@@ -4,30 +4,46 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:bsmi_shi" xmlns:wpf="clr-namespace:CefSharp.Wpf;assembly=CefSharp.Wpf"
+         xmlns:tb="http://www.hardcodet.net/taskbar"
         mc:Ignorable="d"
-        Title="财经快讯-金十" Height="350" Width="350" ResizeMode="NoResize" WindowStartupLocation="CenterScreen"  WindowStyle="None" MouseDown="Window_MouseDown" Topmost="True">
-    
-    <Grid Focusable="True">
+        Title="财经快讯-金十" Height="350" Width="350" ResizeMode="NoResize" WindowStartupLocation="CenterScreen"
+        WindowStyle="None" MouseDown="Window_MouseDown" Topmost="True" Icon="AppLogo.ico" ShowInTaskbar="False">
 
+
+    <Window.Resources>
+
+        <ContextMenu x:Key="TrayMenu">
+
+           
+
+                <MenuItem Header="最小化窗口" Click="MenuItem_Click_Window_Min"></MenuItem>
+                <MenuItem Header="最大化窗口" Click="MenuItem_Click_Window_Max"></MenuItem>
+                <MenuItem Header="还原窗口" Click="MenuItem_Click_Window_Normal"></MenuItem>
+                <Separator />
+                <MenuItem Header="刷新数据" Click="MenuItem_Click_Refresh_Page"></MenuItem>
+                <Separator />
+            <MenuItem Header="关闭" Click="MenuItem_Click"></MenuItem>
+
+        </ContextMenu>
+
+    </Window.Resources>
+    <Grid Focusable="True">
+        <tb:TaskbarIcon x:Name="myNotifyIcon"
+                    Visibility="Visible"
+                    ToolTipText="Fallback ToolTip for Windows xp"
+                    IconSource="AppLogo.ico"
+                    ContextMenu="{StaticResource TrayMenu}"
+                    MenuActivation="LeftOrRightClick"
+                    PopupActivation="DoubleClick"
+      />
 
         <wpf:ChromiumWebBrowser x:Name="xBrowser"
                                     Address="https://www.jin10.com/example/jin10.com.html?fontSize=14px&amp;theme=white" >
            
 
         </wpf:ChromiumWebBrowser>
-        <Border BorderThickness="0,3,0,0" BorderBrush="Gray" >
-            <Border.ContextMenu>
-                <ContextMenu>
+        <Border BorderThickness="0,3,0,0" BorderBrush="Gray" ContextMenu="{StaticResource TrayMenu}" >
 
-                    <MenuItem Header="最小化窗口" Click="MenuItem_Click_Window_Min"></MenuItem>
-                    <MenuItem Header="最大化窗口" Click="MenuItem_Click_Window_Max"></MenuItem>
-                    <MenuItem Header="还原窗口" Click="MenuItem_Click_Window_Normal"></MenuItem>
-                    <Separator />
-                    <MenuItem Header="刷新数据" Click="MenuItem_Click_Refresh_Page"></MenuItem>
-                    <Separator />
-                    <MenuItem Header="关闭" Click="MenuItem_Click"></MenuItem>
-                </ContextMenu>
-            </Border.ContextMenu>
 
         </Border>
 

@@ -16,8 +16,25 @@
   <DefineConstants>TRACE</DefineConstants>
 </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <DefineConstants />
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningsAsErrors />
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="AppLogo.ico" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="AppLogo.ico">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
   <ItemGroup>
     <PackageReference Include="CefSharp.Wpf.NETCore" Version="91.1.230" />
+    <PackageReference Include="Hardcodet.NotifyIcon.Wpf" Version="1.1.0" />
   </ItemGroup>
 
 </Project>
