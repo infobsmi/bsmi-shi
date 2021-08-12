@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -20,9 +21,15 @@ namespace bsmi_shi
     /// </summary>
     public partial class MainWindow : Window
     {
+        public long wcnum = 0;
+        public double oldLeft = 0;
+
         public MainWindow()
         {
             InitializeComponent();
+            this.Left = SystemParameters.PrimaryScreenWidth - this.Width;
+            this.Top = (SystemParameters.PrimaryScreenHeight / 2) - (this.Height/1.382);
+
         }
 
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
@@ -70,6 +77,36 @@ namespace bsmi_shi
         private void MenuItem_Click_1(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void Window_MouseLeave(object sender, MouseEventArgs e)
+        {
+            wcnum = wcnum + 1;
+            //记录旧的位置
+            oldLeft = this.Left;
+            if (Application.Current.MainWindow.WindowState != WindowState.Maximized)
+            {
+                Thread.Sleep(300);
+
+                this.Left = SystemParameters.PrimaryScreenWidth - 15;
+                Application.Current.MainWindow.Height = 15;
+                Application.Current.MainWindow.Width = 15;
+            }
+        }
+
+        private void Window_MouseEnter(object sender, MouseEventArgs e)
+        {
+            if (wcnum > 0)
+            {
+                if (Application.Current.MainWindow.WindowState != WindowState.Maximized)
+                {
+                    xBrowser.Load("https://www.jin10.com/example/jin10.com.html?fontSize=14px&amp;theme=white");
+                    Application.Current.MainWindow.Height = 350;
+                    Application.Current.MainWindow.Width = 350;
+
+                   this.Left = SystemParameters.PrimaryScreenWidth - 350;
+                }
+            }
         }
     }
 }

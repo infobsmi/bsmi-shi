@@ -6,8 +6,8 @@
         xmlns:local="clr-namespace:bsmi_shi" xmlns:wpf="clr-namespace:CefSharp.Wpf;assembly=CefSharp.Wpf"
          xmlns:tb="http://www.hardcodet.net/taskbar"
         mc:Ignorable="d"
-        Title="财经快讯-金十" Height="350" Width="350" ResizeMode="NoResize" WindowStartupLocation="CenterScreen"
-        WindowStyle="None" MouseDown="Window_MouseDown" Topmost="True" Icon="AppLogo.ico" ShowInTaskbar="False">
+        Title="财经快讯-金十" Height="350" Width="350" ResizeMode="NoResize" WindowStartupLocation="Manual"
+        WindowStyle="None" MouseDown="Window_MouseDown" Topmost="True" Icon="AppLogo.ico" ShowInTaskbar="False" MouseLeave="Window_MouseLeave" MouseEnter="Window_MouseEnter">
 
 
     <Window.Resources>
@@ -42,7 +42,7 @@
            
 
         </wpf:ChromiumWebBrowser>
-        <Border BorderThickness="0,3,0,0" BorderBrush="Gray" >
+        <Border BorderThickness="0,15,0,0" BorderBrush="Gray" >
 
             <Border.ContextMenu>
                 <ContextMenu>
