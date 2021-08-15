@@ -74,12 +74,8 @@ namespace bsmi_shi
 
         }
 
-        private void MenuItem_Click_1(object sender, RoutedEventArgs e)
-        {
 
-        }
-
-        private void Window_MouseLeave(object sender, MouseEventArgs e)
+        private void Window_LittleMore(object sender, RoutedEventArgs e)
         {
             wcnum = wcnum + 1;
             //记录旧的位置
@@ -98,13 +94,16 @@ namespace bsmi_shi
         {
             if (wcnum > 0)
             {
-                if (Application.Current.MainWindow.WindowState != WindowState.Maximized)
+                if (Application.Current.MainWindow.Height <= 15)
                 {
-                    xBrowser.Load("https://www.jin10.com/example/jin10.com.html?fontSize=14px&amp;theme=white");
-                    Application.Current.MainWindow.Height = 350;
-                    Application.Current.MainWindow.Width = 350;
+                    if (Application.Current.MainWindow.WindowState != WindowState.Maximized)
+                    {
+                        xBrowser.Load("https://www.jin10.com/example/jin10.com.html?fontSize=14px&amp;theme=white");
+                        Application.Current.MainWindow.Height = 350;
+                        Application.Current.MainWindow.Width = 350;
 
-                   this.Left = SystemParameters.PrimaryScreenWidth - 350;
+                        this.Left = SystemParameters.PrimaryScreenWidth - 350;
+                    }
                 }
             }
         }

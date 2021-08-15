@@ -7,17 +7,17 @@
          xmlns:tb="http://www.hardcodet.net/taskbar"
         mc:Ignorable="d"
         Title="财经快讯-金十" Height="350" Width="350" ResizeMode="NoResize" WindowStartupLocation="Manual"
-        WindowStyle="None" MouseDown="Window_MouseDown" Topmost="True" Icon="AppLogo.ico" ShowInTaskbar="False" MouseLeave="Window_MouseLeave" MouseEnter="Window_MouseEnter">
+        WindowStyle="None" MouseDown="Window_MouseDown" Topmost="True" Icon="AppLogo.ico" ShowInTaskbar="False" MouseEnter="Window_MouseEnter">
 
 
     <Window.Resources>
 
         <ContextMenu x:Key="TrayMenu">
 
-           
 
-                <MenuItem Header="最小化窗口" Click="MenuItem_Click_Window_Min"></MenuItem>
-                <MenuItem Header="最大化窗口" Click="MenuItem_Click_Window_Max"></MenuItem>
+
+            <MenuItem Header="最小化窗口" Click="MenuItem_Click_Window_Min"></MenuItem>
+            <MenuItem Header="最大化窗口" Click="MenuItem_Click_Window_Max"></MenuItem>
                 <MenuItem Header="还原窗口" Click="MenuItem_Click_Window_Normal"></MenuItem>
                 <Separator />
                 <MenuItem Header="刷新数据" Click="MenuItem_Click_Refresh_Page"></MenuItem>
@@ -48,6 +48,7 @@
                 <ContextMenu>
 
 
+                    <MenuItem Header="贴边缩小" Click="Window_LittleMore"></MenuItem>
 
                     <MenuItem Header="最小化窗口" Click="MenuItem_Click_Window_Min"></MenuItem>
                     <MenuItem Header="最大化窗口" Click="MenuItem_Click_Window_Max"></MenuItem>
