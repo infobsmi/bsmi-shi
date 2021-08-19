@@ -6,16 +6,17 @@
     <UseWPF>true</UseWPF>
     <StartupObject>bsmi_shi.App</StartupObject>
     <ApplicationIcon>AppLogo.ico</ApplicationIcon>
-    <Platforms>x64;x86</Platforms>
+    <Platforms>x86</Platforms>
     <Version>1.5.0</Version>
   </PropertyGroup>
 
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <DefineConstants />
-    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
-    <WarningsAsErrors />
+  <PropertyGroup Condition="'$(TargetFramework)' == 'net6.0-windows' AND '$(PublishSingleFile)' == 'true'">
+    <!-- Extract all files to disk at runtime -->
+    <IncludeAllContentForSelfExtract>true</IncludeAllContentForSelfExtract>
+    <!-- Include our native files in the resulting exe -->
+    <IncludeNativeLibrariesForSelfExtract>true</IncludeNativeLibrariesForSelfExtract>
+    <StartupObject>bsmi_shi.ProgramPublishSingleFile</StartupObject>
   </PropertyGroup>
-
   <ItemGroup>
     <None Remove="AppLogo.ico" />
   </ItemGroup>
@@ -27,7 +28,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="CefSharp.Wpf.NETCore" Version="91.1.230" />
+    <PackageReference Include="CefSharp.Wpf.NETCore" Version="92.0.251" />
     <PackageReference Include="Hardcodet.NotifyIcon.Wpf" Version="1.1.0" />
   </ItemGroup>
 
@@ -44,6 +45,10 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Update="chromiumembeddedframework.runtime.win-x86" Version="92.0.25" />
   </ItemGroup>
 
 </Project>
