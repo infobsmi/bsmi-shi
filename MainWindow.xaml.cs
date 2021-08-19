@@ -13,7 +13,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Microsoft.Web.WebView2.Core;
 
 namespace bsmi_shi
 {
@@ -71,7 +70,7 @@ namespace bsmi_shi
 
         private void MenuItem_Click_Refresh_Page(object sender, RoutedEventArgs e)
         {
-            xBrowser.CoreWebView2.Navigate("https://www.jin10.com/example/jin10.com.html?fontSize=14px&amp;theme=white");
+            xBrowser.Load("https://www.jin10.com/example/jin10.com.html?fontSize=14px&amp;theme=white");
 
         }
 
@@ -99,7 +98,7 @@ namespace bsmi_shi
                 {
                     if (Application.Current.MainWindow.WindowState != WindowState.Maximized)
                     {
-                        xBrowser.CoreWebView2.Navigate("https://www.jin10.com/example/jin10.com.html?fontSize=14px&amp;theme=white");
+                        xBrowser.Load("https://www.jin10.com/example/jin10.com.html?fontSize=14px&amp;theme=white");
                         Application.Current.MainWindow.Height = 350;
                         Application.Current.MainWindow.Width = 350;
 
