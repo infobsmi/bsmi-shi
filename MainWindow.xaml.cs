@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Toolkit.Wpf.UI.Controls;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,12 +24,15 @@ namespace bsmi_shi
     {
         public long wcnum = 0;
         public double oldLeft = 0;
+        private readonly Uri j10Url = new Uri("https://www.jin10.com/example/jin10.com.html?fontSize=14px&amp;theme=white");
 
         public MainWindow()
         {
             InitializeComponent();
             this.Left = SystemParameters.PrimaryScreenWidth - this.Width;
             this.Top = (SystemParameters.PrimaryScreenHeight / 2) - (this.Height/1.382);
+
+
 
         }
 
@@ -70,8 +74,7 @@ namespace bsmi_shi
 
         private void MenuItem_Click_Refresh_Page(object sender, RoutedEventArgs e)
         {
-            xBrowser.Load("https://www.jin10.com/example/jin10.com.html?fontSize=14px&amp;theme=white");
-
+            xBrowser.Refresh();
         }
 
 
@@ -98,7 +101,7 @@ namespace bsmi_shi
                 {
                     if (Application.Current.MainWindow.WindowState != WindowState.Maximized)
                     {
-                        xBrowser.Load("https://www.jin10.com/example/jin10.com.html?fontSize=14px&amp;theme=white");
+                        xBrowser.Refresh();
                         Application.Current.MainWindow.Height = 350;
                         Application.Current.MainWindow.Width = 350;
 
@@ -107,5 +110,6 @@ namespace bsmi_shi
                 }
             }
         }
+
     }
 }
