@@ -8,7 +8,6 @@
     <ApplicationIcon>AppLogo.ico</ApplicationIcon>
     <Platforms>x86</Platforms>
     <Version>1.6.0</Version>
-    <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
 
   <ItemGroup>
@@ -38,10 +37,6 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Update="chromiumembeddedframework.runtime.win-x86" Version="92.0.25" />
   </ItemGroup>
 
 </Project>
