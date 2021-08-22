@@ -1,5 +1,4 @@
-﻿using Microsoft.Toolkit.Wpf.UI.Controls;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -74,7 +73,7 @@ namespace bsmi_shi
 
         private void MenuItem_Click_Refresh_Page(object sender, RoutedEventArgs e)
         {
-            xBrowser.Refresh();
+           // xBrowser.Refresh();
         }
 
 
@@ -101,7 +100,7 @@ namespace bsmi_shi
                 {
                     if (Application.Current.MainWindow.WindowState != WindowState.Maximized)
                     {
-                        xBrowser.Refresh();
+                        //xBrowser.Refresh();
                         Application.Current.MainWindow.Height = 350;
                         Application.Current.MainWindow.Width = 350;
 

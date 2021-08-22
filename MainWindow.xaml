@@ -3,8 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:bsmi_shi"
-         xmlns:wpf="clr-namespace:Microsoft.Toolkit.Wpf.UI.Controls;assembly=Microsoft.Toolkit.Wpf.UI.Controls.WebView"   
+        xmlns:local="clr-namespace:bsmi_shi" 
          xmlns:tb="http://www.hardcodet.net/taskbar"
         mc:Ignorable="d"
         Title="财经快讯-金十" Height="350" Width="350" ResizeMode="NoResize" WindowStartupLocation="Manual"
@@ -57,10 +56,24 @@
 
                 </ContextMenu>
             </Border.ContextMenu>
-
-
-
-            <wpf:WebView x:Name="xBrowser" Source="https://www.jin10.com/example/jin10.com.html?fontSize=14px&amp;theme=white" />
+            <ScrollViewer HorizontalScrollBarVisibility="Auto">
+                <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left" Width="332">
+                    <TextBlock TextWrapping="Wrap" Margin="0,0,0,20">Scrolling is enabled when it is necessary. 
+      Resize the window, making it larger and smaller.</TextBlock>
+                    <TextBlock TextWrapping="Wrap" Margin="0,0,0,20">Scrolling is enabled when it is necessary. 
+      Resize the window, making it larger and smaller.</TextBlock>
+                    <TextBlock TextWrapping="Wrap" Margin="0,0,0,20">Scrolling is enabled when it is necessary. 
+      Resize the window, making it larger and smaller.</TextBlock>
+                    <TextBlock TextWrapping="Wrap" Margin="0,0,0,20">Scrolling is enabled when it is necessary. 
+      Resize the window, making it larger and smaller.</TextBlock>
+                    <TextBlock TextWrapping="Wrap" Margin="0,0,0,20">Scrolling is enabled when it is necessary. 
+      Resize the window, making it larger and smaller.</TextBlock>
+                    <TextBlock TextWrapping="Wrap" Margin="0,0,0,20">Scrolling is enabled when it is necessary. 
+      Resize the window, making it larger and smaller.</TextBlock>
+                    <TextBlock TextWrapping="Wrap" Margin="0,0,0,20">Scrolling is enabled when it is necessary. 
+      Resize the window, making it larger and smaller.</TextBlock>
+                </StackPanel>
+            </ScrollViewer>
         </Border>
 
     </Grid>
