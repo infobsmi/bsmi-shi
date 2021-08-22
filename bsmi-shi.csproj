@@ -1,13 +1,14 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <TargetFramework>net6.0-windows10.0.18362.0</TargetFramework>
     <RootNamespace>bsmi_shi</RootNamespace>
     <UseWPF>true</UseWPF>
     <StartupObject>bsmi_shi.App</StartupObject>
     <ApplicationIcon>AppLogo.ico</ApplicationIcon>
     <Platforms>x86</Platforms>
-    <Version>1.6.0</Version>
+    <Version>1.7.0</Version>
+    <MinimumPlatformVersion>10.0.18362.0</MinimumPlatformVersion>
   </PropertyGroup>
 
   <ItemGroup>
